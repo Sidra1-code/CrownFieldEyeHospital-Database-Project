@@ -1,0 +1,108 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="crownfield-logical-erd" name="Logical ERD - Crow&#39;s Foot">
+    <mxGraphModel dx="2424" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="patient" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;PATIENT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK patient_id : VARCHAR(10)&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;first_name : VARCHAR(60) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;last_name : VARCHAR(60) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;date_of_birth : DATE NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;postcode : VARCHAR(10) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;phone : VARCHAR(25) NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;email : VARCHAR(150) NULL, UNIQUE&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="190" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="specialty" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;SPECIALTY&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK specialty_id : INT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;specialty_name : VARCHAR(80) NOT NULL, UNIQUE&lt;/div&gt;" vertex="1">
+          <mxGeometry height="105" width="245" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clinician" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;CLINICIAN&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK clinician_id : INT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;first_name : VARCHAR(60) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;last_name : VARCHAR(60) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;professional_title : VARCHAR(30) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;FK specialty_id : INT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;email : VARCHAR(150) NOT NULL, UNIQUE&lt;/div&gt;" vertex="1">
+          <mxGeometry height="175" width="210" x="260" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="clinic" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;CLINIC&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK clinic_id : INT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;clinic_name : VARCHAR(100) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;address_line : VARCHAR(150) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;postcode : VARCHAR(10) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;phone : VARCHAR(25) NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="155" width="200" x="40" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="appointment" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;APPOINTMENT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK appointment_id : INT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;FK patient_id : VARCHAR(10) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;FK clinician_id : INT NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;FK clinic_id : INT NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;appointment_date : DATE NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;appointment_time : TIME NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;appointment_status : VARCHAR(20) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;appointment_notes : VARCHAR(255) NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="220" x="710" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="diagnosis" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;DIAGNOSIS&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK diagnosis_id : INT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;diagnosis_code : VARCHAR(20) NOT NULL, UNIQUE&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;diagnosis_name : VARCHAR(150) NOT NULL, UNIQUE&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;description : VARCHAR(255) NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="255" x="1110" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="apptdiag" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;APPOINTMENT_DIAGNOSIS&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK, FK appointment_id : INT NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK, FK diagnosis_id : INT NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;diagnosis_notes : VARCHAR(255) NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="115" width="190" x="1110" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="prescription" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;PRESCRIPTION&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK prescription_id : INT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;FK appointment_id : INT NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;prescribed_date : DATE NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;prescription_status : VARCHAR(20) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;instructions : VARCHAR(255) NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="220" x="1110" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="medicine" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;MEDICINE&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK medicine_id : INT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;medicine_name : VARCHAR(120) NOT NULL, UNIQUE&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;medicine_form : VARCHAR(50) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;strength : VARCHAR(50) NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="135" width="245" x="1460" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="prescriptionitem" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;PRESCRIPTION_ITEM&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK, FK prescription_id : INT NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK, FK medicine_id : INT NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;dose : VARCHAR(80) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;route : VARCHAR(40) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;frequency : VARCHAR(100) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;duration_days : INT NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;item_instructions : VARCHAR(255) NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="165" width="190" x="1450" y="265" as="geometry" />
+        </mxCell>
+        <mxCell id="followup" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=#6c8ebf;fontSize=10;" value="&lt;div style=&#39;font-weight:bold;text-align:center;background:#dae8fc;padding:6px;border-bottom:2px solid #6c8ebf&#39;&gt;FOLLOW_UP_PLAN&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;PK follow_up_id : INT&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;FK appointment_id : INT NOT NULL, UNIQUE&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;due_date : DATE NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;priority : VARCHAR(20) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;follow_up_status : VARCHAR(20) NOT NULL&lt;/div&gt;&lt;div style=&#39;padding:2px 4px;border-bottom:1px solid #e1e1e1&#39;&gt;plan_notes : VARCHAR(255) NULL&lt;/div&gt;" vertex="1">
+          <mxGeometry height="145" width="220" x="710" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="e_patient_appt" edge="1" parent="1" source="patient" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERmany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="appointment" value="Patient: 0..* appointments&lt;br/&gt;Appointment: exactly 1 patient">
+          <mxGeometry relative="1" x="-0.0343" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="520" y="180" />
+              <mxPoint x="520" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_clinician_appt" edge="1" parent="1" source="clinician" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERmany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="appointment" value="Clinician: 0..* appointments&lt;br/&gt;Appointment: exactly 1 clinician">
+          <mxGeometry relative="1" x="-0.101" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="640" y="297.5" />
+              <mxPoint x="640" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_clinic_appt" edge="1" parent="1" source="clinic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERmany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="appointment" value="Clinic: 0..* appointments&lt;br/&gt;Appointment: exactly 1 clinic">
+          <mxGeometry relative="1" x="0.0439" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="475" y="487.5" />
+              <mxPoint x="475" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_specialty_clinician" edge="1" parent="1" source="specialty" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERzeroToOne;endArrow=ERzeroToMany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="clinician" value="Specialty: 0..* clinicians&lt;br/&gt;Clinician: 0..1 specialty">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_appt_diag" edge="1" parent="1" source="appointment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERmany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="apptdiag" value="Appointment: 0..* diagnosis links&lt;br/&gt;Link: exactly 1 appointment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_diag_appt" edge="1" parent="1" source="diagnosis" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERmany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="apptdiag" value="Diagnosis: 0..* links&lt;br/&gt;Link: exactly 1 diagnosis">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_appt_rx" edge="1" parent="1" source="appointment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERmany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="prescription" value="Appointment: 0..* prescriptions&lt;br/&gt;Prescription: exactly 1 appointment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_rx_item" edge="1" parent="1" source="prescription" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERmany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="prescriptionitem" value="Prescription: 1..* items&lt;br/&gt;Item: exactly 1 prescription">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_medicine_item" edge="1" parent="1" source="medicine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERmany;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="prescriptionitem" value="Medicine: 0..* items&lt;br/&gt;Item: exactly 1 medicine">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_appt_follow" edge="1" parent="1" source="appointment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=ERone;endArrow=ERzeroToOne;startFill=0;endFill=0;strokeWidth=1.5;fontSize=9;labelBackgroundColor=#ffffff;" target="followup" value="Appointment: 0..1 plan&lt;br/&gt;Plan: exactly 1 appointment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="notation_note" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=15;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" value="&lt;b&gt;Notation&lt;/b&gt;&lt;br/&gt;PK = Primary Key; FK = Foreign Key; UQ = Unique&lt;br/&gt;0..1 = optional one; 0..* = optional many; 1 = exactly one; 1..* = one or more.&lt;br/&gt;The relationship labels state minimum and maximum participation explicitly." vertex="1">
+          <mxGeometry height="100" width="600" x="40" y="760" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
